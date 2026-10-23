@@ -1,0 +1,8 @@
+# 登录态与采集输出（含个人数据，严禁提交）
+.chrome-profile/
+output/
+*.json
+!package.json
+
+__pycache__/
+.DS_Store
