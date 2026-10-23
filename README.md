@@ -21,6 +21,18 @@
 
 **设计哲学**：采集和粗分类全部本地完成，token 只花在真正需要理解的部分。实测单视频 80 条评论 25 秒抓完，整个分析流程 LLM 只需读一张 ~80 行的表。
 
+## 安装为 Agent Skill
+
+本仓库同时是**开源 Agent Skills 约定**（SKILL.md）的实现，兼容所有支持该约定的 agent：
+
+| Agent | 安装方式 |
+|---|---|
+| **WorkBuddy** | 复制 `douyin-comment-miner/` 目录到 `~/.workbuddy/skills/`，对话中说"现在扫一下 XX 的评论区"即触发 |
+| **Claude Code / Cursor 等** | 复制到对应的 skills 目录（如 `~/.claude/skills/`），结构与触发方式同理 |
+| **其他 agent / 手动使用** | 不装 skill 也可以，脚本就是普通 CLI，直接按下方"用法"命令行运行 |
+
+> 项目级共享：复制到项目根目录 `.workbuddy/skills/`（或对应 agent 的项目级目录），团队所有人可用。
+
 ## 安装
 
 ```bash
